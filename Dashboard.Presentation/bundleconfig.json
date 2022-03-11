@@ -1,0 +1,60 @@
+[
+  {
+    "outputFileName": "Content/projects/app/controller/Master/indexcontroller.js",
+    "inputFiles": [
+      "Content/projects/app/controller/Master/master-page-controller.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/projects/app/directive/directive.js",
+    "inputFiles": [
+      "Content/projects/app/directive/formatMoney.js",
+      "Content/projects/app/directive/getWidth.js",
+      "Content/projects/app/directive/lazyLoad.js",
+      "Content/projects/app/directive/noInput.js",
+      "Content/projects/app/directive/whenEnter.js",
+      "Content/projects/app/directive/compile.js",
+      "Content/projects/app/directive/inputFormat.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/projects/app/factory/factory.js",
+    "inputFiles": [
+      "Content/projects/app/factory/ApiHelper.js",
+      "Content/projects/app/factory/CommonHelper.js",
+      "Content/projects/app/factory/DataFactory.js",
+      "Content/projects/app/factory/UtilFactory.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/projects/app/filters/filters.js",
+    "inputFiles": [
+      "Content/projects/app/filters/dateFormat.js",
+      "Content/projects/app/filters/trustHtml.js",
+      "Content/projects/app/filters/ifEmpty.js",
+      "Content/projects/app/filters/toFixedDecimal.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/projects/app/app-bundle.js",
+    "inputFiles": [
+      "Content/projects/app/controller/Master/indexcontroller.js",
+      "Content/projects/app/directive/directive.js",
+      "Content/projects/app/factory/factory.js",
+      "Content/projects/app/filters/filters.js",
+      "Content/projects/app/app.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/projects/app/controller/Master/master-page-controller.min.js",
+    "inputFiles": [
+      "Content/projects/app/controller/Master/master-page-controller.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/projects/app/app-bundle.min.js",
+    "inputFiles": [
+      "Content/projects/app/app-bundle.js"
+    ]
+  }
+]

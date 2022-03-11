@@ -1,0 +1,107 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/adminlte/dist/css/adminlte.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="~/Content/adminlte/plugins/summernote/summernote-bs4.min.css">
+    <!-- Sweet Alert-->
+    <link href="~/Content/assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/plugins/toastr/toastr.min.css" rel="stylesheet" />
+</head>
+<body ng-app="MyApp" class="sidebar-mini control-sidebar-slide-open">
+    <div ng-controller="MasterPageController" ng-cloak>
+    </div>
+    <div class="wrapper">
+        @Html.Action("Header", "Template", new { Area = "" })
+        <!-- ========== Left Sidebar Start ========== -->
+        @Html.Action("Sidebar", "Template", new { Area = "" })
+        <!-- Left Sidebar End -->
+        @RenderBody()
+
+    </div>
+    <!-- ./wrapper -->
+    <script src="~/Content/projects/angular-1.6.3/angular.min.js"></script>
+    <script src="~/Content/projects/angular-1.6.3/angular-route.min.js"></script>
+    <script src="~/Content/projects/app/app-bundle.js"></script>
+    <script src="~/Content/projects/app/site.js"></script>
+    <script src="~/Content/plugins/lodash/core.js"></script>
+
+    <!-- jQuery -->
+    <script src="~/Content/adminlte/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/Content/adminlte/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="~/Content/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/Content/adminlte/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/Content/adminlte/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Content/adminlte/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="~/Content/adminlte/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="~/Content/adminlte/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/Content/adminlte/plugins/moment/moment.min.js"></script>
+    <script src="~/Content/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="~/Content/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="~/Content/adminlte/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/Content/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="~/Content/adminlte/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Content/adminlte/dist/js/adminlte.js"></script>
+
+    <script src="~/Content/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- Sweet Alerts js -->
+    <script src="~/Content/assets/libs/sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/Content/plugins/toastr/toastr.min.js"></script>
+
+
+    <script src="~/Content/assets/libs/moment/min/moment.min.js"></script>
+    <script src="~/Content/plugins/plotly/plotly.min.js"></script>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        HttpCookie userCookie = new HttpCookie("userid");
+        userCookie.Value = User.Identity.GetUserId();
+        userCookie.Expires = DateTime.Now.AddYears(100);
+        //userCookie.Path = "/Redirect";
+        Response.SetCookie(userCookie);
+    }
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿@model IEnumerable<Dashboard.Application.ViewModels.MenuViewModel>
+
+
+<aside class="main-sidebar sidebar-light-primary elevation-1">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+        <img src="~/Content/adminlte/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image">
+        <span class="brand-text font-weight-light">&nbsp;</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition">
+        <div class="os-resize-observer-host observed"><div class="os-resize-observer" style="left: 0px; right: auto;"></div></div><div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;"><div class="os-resize-observer"></div></div><div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 533px;"></div><div class="os-padding">
+            <div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;">
+                <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column text-sm" data-widget="treeview" role="menu" data-accordion="false">
+                            <li class="nav-header">METRICS</li>
+                            <li class="nav-item">
+                                <a href="pages/calendar.html" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Overviews
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/gallery.html" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        SLA
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/kanban.html" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Buzz Requests
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/kanban.html" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Calls
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-header" style="border-top: 1px solid #e7e8ec">FILTERS</li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Region
+                                    </p>
+                                </a>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option>Quebec</option>
+                                        <option>option 2</option>
+                                        <option>option 3</option>
+                                        <option>option 4</option>
+                                        <option>option 5</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    View real-time data <input type="checkbox" id="mySwitch" name="my-checkbox" checked data-bootstrap-switch>
+                                </div>
+                            </li>
+                            <li class="nav-header" style="border-top: 1px solid #e7e8ec">REPORT</li>
+                            <li class="nav-item">
+                                <a href="pages/kanban.html" class="nav-link">
+                                    <i class="nav-icon"></i>
+                                    <p>
+                                        Export report
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /.sidebar-menu -->
+                </div>
+            </div>
+        </div><div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"><div class="os-scrollbar-track"><div class="os-scrollbar-handle" style="height: 39.2936%; transform: translate(0px, 0px);"></div></div></div><div class="os-scrollbar-corner"></div>
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+@*<div class="topnav">
+    <div class="container-fluid">
+        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+            <div class="collapse navbar-collapse active" id="topnav-menu-content">
+                <ul class="navbar-nav active">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Childrens.Count() > 0)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
+                                    <i class="@item.Icon me-2"></i><span key="t-apps">@item.Name</span> <div class="arrow-down"></div>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="topnav-pages">
+                                    <div class="dropdown">
+                                        @foreach (var itemChild in item.Childrens)
+                                        {
+                                            <a href="@itemChild.Url" class="dropdown-item" key="t-chat">@itemChild.Name</a>
+                                        }
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li>
+                                <a href="@item.Url" class=" waves-effect">
+                                    <i class="@item.Icon"></i><span>@item.Name</span>
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</div>*@
+
